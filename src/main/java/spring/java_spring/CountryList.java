@@ -24,6 +24,8 @@ public class CountryList {
         this.cityService = cityService;
     }
 
+    // commented this because i use angular to display the data insted with thymeleaf
+    
     /**@GetMapping("/countries")
     public ModelAndView listCountries() {
         ModelAndView modelAndView = new ModelAndView("CountryList");

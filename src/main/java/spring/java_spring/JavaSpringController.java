@@ -35,16 +35,16 @@ public class JavaSpringController {
 
     @GetMapping("/number_template/{n}") 
     public ModelAndView number_template(@PathVariable int n) {
-        ModelAndView modelAndView = new ModelAndView("number"); // Looks for 'number.html'
-        modelAndView.addObject("number", n); // Passes 'n' as a model attribute
+        ModelAndView modelAndView = new ModelAndView("number");
+        modelAndView.addObject("number", n);
         return modelAndView;
     }
 
     @GetMapping("/number_odd_or_even/{n}")
     public ModelAndView number_odd_or_even(@PathVariable int n) {
-        ModelAndView modelAndView = new ModelAndView("number_odd_or_even"); // Looks for 'odd_or_even.html'
-        modelAndView.addObject("number", n); // Passes 'n' as a model attribute
-        modelAndView.addObject("odd_or_even", n % 2 == 0 ? "even" : "odd"); // Passes 'odd' or 'even' as a model attribute
+        ModelAndView modelAndView = new ModelAndView("number_odd_or_even");
+        modelAndView.addObject("number", n);
+        modelAndView.addObject("odd_or_even", n % 2 == 0 ? "even" : "odd");
         return modelAndView;
     }
     
